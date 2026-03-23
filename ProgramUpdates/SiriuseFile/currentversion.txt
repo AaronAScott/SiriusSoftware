@@ -1,0 +1,43 @@
+﻿4.000
+ • Added TWAIN support for scanners
+
+3.252
+ • Improved detection of missing/offline scanner
+ • Added menu options for "Acquire Document" to scan or paste from clipboard.
+
+3.251
+ • Add error trap to connect in scan form, as some scanners won't connect when they are offline, generating an error.
+
+3.250
+ • Add "pause between page" for use when the document feeder scans all pages at once and returns nothing.
+
+3.249
+ • Fix bug that causes infinite loop if a scanner does not raise an error when it has nothing more to scan when using the feeder.
+
+3.248
+ • New Program updater added.  Program will now check for all missing dlls and files.
+ • Program now uses the new SE_MailSender instead of the Sirius Email executable to send emails.
+
+3.247
+ • Add "Change User" function to File menu.
+ • Make lock/unlock cabinet function invisible to non-Super users.
+ • New Lib file with improved functions.
+
+3.246
+ • Change to email routine to support MailKit, and new version of Sirius Email.
+
+3.245
+ • Fix bug in ScanOnePage that allows a second, null, page to be created if the scanner fails to return a "not ready" error when expected.
+ • Add reference to MimeKit to support latest Sirius Email.
+
+3.244
+ • Fix bug that causes error trying to convert "" to Bool when loading properties form.
+ • Fix bug that didn't allow a custom color when changing color theme.
+ • Fix bug that didn't change color of main form when clicking save in color theme.
+
+3.243
+ • Added "Release Notes" support.
+
+3.242
+ • New Login window
+ • Fix to the color theme windows to set a custom color to the currently selected color.
