@@ -1,0 +1,479 @@
+﻿2.040
+ • Add new words to the automatic spell checking code in the compose window.
+
+2.039
+ •  Fix problem with being unable to read emails entirely coded in Base64.
+
+2.038
+ • Replace standard modules lib, global, messagebox and programupdater with new version.
+ • Fix bug in automatic word replacement routine for foreign words commonly used.
+ • Move the line that optionally saves the email's RTF code to the start of the send routine, to ensure it gets saved, in case of a failure processing the RTF into HTML.
+
+2.037
+ • Fixed bug triggered by sender names with apostrophes (like O'Toole).
+
+2.036
+ • Added RTF preprocessing and HTML postprocessing to produce a cleaner HTML output.
+
+2.035
+ • Fix but in new header, that was lacking the </head> tag.
+
+2.034
+ • Fixed bug in RTF-to-HTML conversion where the HTML indicating indents and outdents didn't work in a browser.
+ • Fixed spacing bug but that created double-spacing in the output HTML
+
+2.033
+ • Removed SyncEmojies, now obsolete, from the database sync function.
+
+2.032
+ • Fix bug in Capitalize function, when "captialize all" is used.
+ • Fix bug in converting emojis when the RTF code begins with "\u" instead of "\u-".
+
+2.031
+ • New emoji display that displays all emojis in color, using the WebView control.
+ • New function added to convert RTF unicode sequences for emojis into the integer value, making it possible to translate ALMOST any emoji entered into an email into the correct HTML code.  Replaces the old, limited lookup.
+ • Revised EmojisList table, into which has been imported the description and code of myriad emojis from the Unicode.org website.
+
+
+2.030
+ • Fix bug in ReadEmailHeaders that caused a failure to return the email subject line when only part of it was encoded.
+
+2.029
+ • Fix several bugs in FetchEmail and one in InsertLinks
+
+2.028
+ • Fix bug in ConvertRTFToHTML that causes backslashes in the text to convert incorrectly from RTF.
+
+2.027
+ • Add new "Maintain Spelling Dictionary" function.
+ • Remove "Clear Email Server" function.
+
+2.026
+ • Reduce font size for emojis, so the email list lines can be closer together.
+
+2.025
+ • Fix email display to allow display of emojis even if not separated from text by a space.
+ • Implement ability to remove an email account from the account list.
+
+2.024
+ • Dictionary removed from database into a standalone database, to allow sharing with other programs.
+
+2.023
+ • Fix bug in spell checking that causes parsing of words to be off for the next word, after selecting a replacement for a misspelled word that is shorter in length.
+ • Fix bug that causes RTF codes to garble an HTML link during RTF to HTML translation.
+ • Fix bug in ParseString that causes a delimiter to be missed if its length is > 1 and resides next to a closing quotation mark.
+
+2.022
+ • Change login to IMAP accounts to use TLS security when available, now required by Outlook.
+ • Read IMAP email list into a data structure that can be sorted in the email list window by the columns.
+ • Remove .out files from database if they cannot be found when trying to view.
+ • Fix bug that causes an error in parsing an email address when using reply or forward.
+
+2.021
+ • Move IMAP login into a function that makes 5 attempts to connect and returns success code.
+ • The UnhandledException trap will no longer try to close the program when hit.
+
+2.020
+ • Fix bug in ConvertRTFtoHTML that caused a substring length error when more than one link was included in an email.
+
+2.019
+ • 2.020 prerelease
+ • Fix bug that allowed blocked IMAP emails to briefly appear in inbox list.
+
+2.019
+ • Remove UpdateReadCount(), which overlapped function of ShowUnreadCount in frmMain.
+ • Fix bug in ParseEmailAddress which wasn't removing names before an email address.
+
+2.018
+ • An email in the junk folder didn't get moved to the inbox when marked as "not junk"
+ • Extraneous information in the attachments data, following the file name, was causing an error, both when attempting to list the attachment, and when trying to open the attachment
+ • Width of Drafts label fixed to match Inbox, Sent Items, etc. labels.
+
+2.017
+ • Fix bug that prevented a sender being added to the sender table if the address wasn't contained in "<>" symbols.
+
+2.016
+ • Fix bug in CheckSiteCompatibility that didn't have the correct name of the database template.
+ • Remove Stop from ProgramUpdater in CheckDependencies
+ • Improve handling of setup when running program for the first time.
+ • Change EmailAccounts from a dictionary to a class, so it can be accessed even with no name-key, as happens before the user has fully set up the program.
+ • Add application events for unhandled exception, and starting multiple instances.
+ • Repair damaged and missing portions of functions ToHex in lib.vb.
+ • Fix bug that caused incorrect re-display of a sender in the sender's list after being blocked/unblocked.
+
+2.015
+ • Fix bug that caused error retrieving IMAP email if the sender name contained an apostrophe.
+
+2.014
+ • Fix bug that caused email addresses with a sub-domain to be flagged as junk always.
+ • Allow list of blocked senders to be sorted by clicking on column headers.
+
+2.013
+ • Fix bug that allows an email that fails to send to be deleted from the outbox anyway.
+
+2.012
+ • Fix bug in spell check that could cause the program to crash with a stack overflow if it encountered certain words beginning with "un" or "re".
+ • Add domain validity check to junk mail filtering.
+ • New junk email filtering routine.
+
+2.011
+ • Expand program update to allow copying over of missing non-executable files (i.e.database template).
+ • Default SQL Server instance name changed to MSSQLLocalDB
+
+2.010
+ • Remove quotation marks around to/from names in the View Email form.
+ • New program update routine.
+
+2.009
+ • Add MouseDown event to email subject field, to always set the insertion point to the start of the prompt.
+
+2.008
+ • Fix bug that caused an "object not set" error attempting to read IMAP emails from any folder except the inbox.
+ • Fix bug that caused forwarding or replying to an IMAP email fail.
+
+2.007
+ • Fix bug that caused deleted items in POP3 accounts to be inaccessible to read, or un-deleted items to also be inaccessible.
+ • Fix bug that didn't update the "IsRead" property in the list box after reading an email.
+
+2.006 • Fix bug that caused some emojis in received email to be followed by a ";" character.
+ • Improvements to email search routine for POP3 email.
+ • Fix bug that caused just-received sent items to appear out of order in the email list.
+ • Improvements to FetchEmail routine to improve speed and efficiency.
+
+2.005
+ • Program will now set user Path environment variable to include itself, as the .exe is shared for email services by other programs.
+
+2.004
+ • Add indent feature to compose window.
+
+2.003
+ • Fix bug related to opening multiple instances of a browser when an email link is clicked.
+ • Add new function to view email source rather than using Notepad.
+
+2.002
+ • Fixed bug that caused attachments of content type "quotedprintable" to be unviewable.
+ • Fixed bug that caused the old IE icon to appear on HTML attachments in IMAP email.
+
+2.001
+ • Change the read/unread procedure for improved display and performance.
+ • Startup sort order is now "Date DESC", so newest emails will appear at top of list
+ • Add preview pane to the main form.
+ • Add option to open a new window or not when clicking on a link in the View Email form.
+ • IMAP sent emails no longer include the sender's address in the BCC field.  This is unnecessary, except with POP3 accounts, to receive a sent copy back.
+
+2.000
+ • Added support for IMAP email accounts.
+ • Replaced the IE-based WebBrowser control with the Edge-based WebView2 control for viewing emails.
+ • Fixed several bugs in POP3 email caused by a previous update that added the email file name, including path, to the entry in the email list box.  Affected Archive, Delete, and similar functions that needed to locate an email by the file name.
+ •  Improved display of plain-text emails, to turn text URLs into true links.
+ • HTML attachments now display the icon of the default browser.
+ • Add new form to allow maintaining the list of blocked senders.
+
+1.081
+ • Fix bug that caused the email list not to be refreshed when an inactive email account was selected.
+
+1.080
+ • Fix bug in frmCompose that can result in a really HUGE font, if text at the beginning of a font change begins with a number.
+ • Add ability in frmCompose for Alt-A to copy entire document in text, not HTML format, to clipboard.
+
+1.079
+ • Fix bugs from differences in how MailKit sends emails, which could cause an HTML attachment to overlay the actual email, instead of appearing as an attachment.
+
+1.078
+ • Fixed bug in recent update that caused items in the "sent email" folder to be marked as unread.
+
+1.077
+ • Implemented attachments under MailKit
+ • Send Immediately from frmCompose does not to a receive now.
+
+1.076
+ • Retrieve email function now uses Mailkit.
+ • Fixed bug that caused the unread email count to sometimes not get updated when deleting an unread email.
+
+1.075
+ • Fix bug in frmCompose, btnSend that referenced a hard-coded drive letter when saving debug information.
+
+1.074
+ • Replace .Net Mail with MailKit for SMTP functions.
+ • Default sync, when exiting program, will now perform a "sync.all"
+
+1.073
+ • Fix bug in data adapter modules that didn't use NVARCHAR for the subject line in email definitions.
+
+1.072
+ • Fix syntax error in SyncEmailsInsertCommand that omitted the "IsSynced" field, and was missing the @ before the IsSynced substitution variable.
+
+1.071
+ • Fix bug in DistributeEmail that wasn't setting a value to the "IsSynced" field when importing an email.
+
+1.070
+ • Fix bug that caused IsSynced field in emails to not get updated.  Queries in data adapter modules did not include the field.
+
+1.069
+ • Fix bug that made looking for utf-8? tag in FetchEmail case-sensitive.
+
+1.068
+ • Fix bug that prevents other property pages from showing after selecting "sync database" page.
+
+1.067
+ • Fix bug allowing emails to be duplicated during sync with remote database.
+ • Fix bug that added a semi-colon to some emojis.
+
+1.066
+ • Added error trapping to GetAttachment to prevent errors from appearing in calling routine.
+ • Made change to GetAttachment to fix bug where non-Base64 attachments get saved but not decoded.
+ • Fixed email search routine to filter by actual email date and not the email file date.
+
+1.065
+ • Add "blasé" to list of foreign words automatically spelled.
+ • Fix problem in GetNextWord that allowed delimiters to pass as characters.
+
+1.064
+ • Show examples of defined signatures in the tooltip of each listed signature menu item.
+
+1.063
+ • Fix bug in EmojiInsertCommand that caused a syntax error near "group".
+ • Change emoji list so that ALL emojis are now represented by the Unicode value, and none with literals.
+
+1.062
+ • Change "loop while" condtion in ReadInLine to exit routine when no more data is read, rather than reaching the theoretical size of the email.
+
+1.061
+ • Fix various problems in spell-check: improve pool of suggested words, fix problem with a selected replacement appearing in the wrong place, correct restart point after an edit.
+
+1.060
+ • Fix problems with dictionary sync: detecting "unprintable" characters in a word, and with adding a word containing Unicode characters to a dictionary.
+
+1.059
+ • Fix bug that could cause a stack overflow when spell-checking possessives ending with " 's ".
+
+1.058
+ • Change technique for adding a signature to an email to prevent the editor window from refreshing.
+ • Increase length of label for displaying a misspelled word in the spell check dialog, to allow longer words to not be cut off.
+
+1.057
+ • Add routine in RTF-HTML conversion to enable some Arabic words to be correctly converted.
+ • Fix  bug in RTF-HTML conversion that left odd spaces in the converted text following some font or text color changes.
+
+1.056
+ • Add email account name to .out files.  Make changes so that an email in the outbox is only sent from the appropriate email account.
+ • Fix bug where a sent email was always getting its credentials to login from the default account.
+ • Add "tiramisù" to words automatically spelled.
+
+1.055
+ • Fix bug in RTF to HTML conversion that fails with an email that contains images but no text.
+ • New, even faster routine to read in an email from the server.
+ • Fix bug in Sync where any email copied from remote to local database wasn't getting marked as synced.
+
+1.054
+ • Add new routine to read in an email from the server that tries both readtoend and readline, and ultimately returns whatever it CAN read, whether or not an error was generated during the read.
+ • Fix bug in the ClearServer form that was using the old method of flagging an SSL vs. Non-SSL connection.
+
+1.053
+ • Add check before syncing emails to remove remote emails missing the email file.
+ • Add new field to email table (DB version 1.05) to flag each email as synced, to prevent constant checking.
+ • Select only emails not marked as synced when syncing.
+
+1.052
+ • Fix bug in email sync that duplicated emails on local computer.
+ • Refinements to sync: at close, selecting to sync (if asked) only syncs dictionary, contacts and emojis.  Emails are only synced by selecting the "sync databases" menu option.
+
+1.051
+ • Fix bug introduced in previous version that causes failure to add new word to dictionary.
+ • 
+Fix bug that prevented "pate", when typed, from automatically converting to pâté. 
+ • Add feature to check for and remove duplicate emails.
+
+1.050
+ • Add feature to sync emails between the local and a remote email database.
+ • 
+Add feature to allow user to check for and remove duplicate emails.
+ • Fix bug that caused a "email may have been moved or deleted" message when trying to view an email after sorting email list by a column.
+ • 
+Sorting the email list by a column will now cause email to remain sorted by that column even after a refresh.
+
+
+1.049
+ • Enable tabs in email composition, and translate them to &emsp; codes in HTML.
+
+1.048
+ • Automatically save the draft copy first thing when Send it clicked, to enable recovery if something fails.
+
+1.047
+ •  Fix problem with decoded Base64 strings of UTF-8 data having spaces before punctuation marks, quite often.
+
+1.046
+ • Changes to KeyPress event in frmCompose to change method of replacing text when typing special words, to produce "flicker free" replacments on the screen.
+
+1.045
+ • Fix problem in spell checking a selection that duplicates text.
+ • 
+Fix problem in spell checking where selecting "edit" from spelling dialog causes email to not be sent automatically after the spell check is completed.
+
+1.044
+ • Fix errors in GetContent, application/ tag when "name=" value not present.
+
+1.043
+ • Updated "About" window with version that allows user to see the release notes.
+
+1.042
+ • Fix problem that deletes all deleted or junk items, instead of just the ones for the current email account, when the "empty folder" option is selected.
+
+1.041
+ • Fix translation of RTF escapes (\') to HTML.
+ • 
+Add "pâté" to French words it corrects automatically.
+
+1.040
+ • Enable viewing of an email in the outbox, which is in a different format.
+
+1.039
+ • Add new wording to prompt to save draft, to emphasize that "No" will delete existing draft.
+ • 
+Change KeyPress event in frmCompose to use fancy open quote character after any opening parenthesis or dash.
+
+1.038
+ •  Fix spell checking to remove beginnings "un" and "re" if word not found on first try.
+
+1.037
+ • Fix spell checking to ignore plural endings "s" and "es" if word not found on first try.
+ • Fix spell checking so that removing an ending and checking again does not alter the word being checked.
+
+ 
+1.036
+ • Fix problem that incorrectly stores subjects in Unicode as "?" during the BuildMessageStore process.
+
+1.035
+ • Fixed bugs with upgrading database to version 1.04, during which the new default account wasn't being created.
+
+1.034
+ • Implemented Rebuild Database option in Utilities.
+ • 
+Add Compact Database option to Utilities.
+ • 
+Add support for multiple email accounts.
+ • 
+Change database (ver 1.04) to add account name to email.  Move account information from registry to control table.
+ • Remove plain email option from compose window.
+ • 
+Change UpdateUnreadCount routine to actively count unread emails at every call.
+
+ 
+1.033
+ •  Fix problem with spell check flagging possessives ending in apostrophe as misspelled.
+ • 
+ Fix problem with spell check sending when spell check cancelled.
+
+1.032
+ • Add ability to copy text from email subject line.
+ • 
+Fix problem with multiple draft files being created.
+ • 
+Change database (ver 1.03) to allow both versions of foreign words, like jalapeno and jalapeño.
+ • Remove Hash column from spelling dictionary. 
+ • 
+Add 5 second delay between sending and receiving email to allow time for sent email copy to return.
+ • Add @ sign as delimiter to spell checking routine.
+
+
+
+1.031
+ • Remove use of ReadToEnd when downloading email, as it fails sometimes with new email service.'
+ • 
+Fix problem in spell check routine when duplicate words exist in close proximity.
+
+1.030
+ • Added routine to DLL to calculate Levenshtein distance using Wagner-Fischer algorithm for spell check routine.
+
+1.029
+ • Fix and improvements to Maintain Signatures form.
+
+1.028
+ • Add "add sender to contacts" item to the context menu for a displayed email.
+ • 
+Add signature feature for new emails.
+ 
+
+1.027
+ • Fix problem with "reply" and "forward" caused by change made when adding search feature, of saving the entire file name in the list box entry.
+ • 
+Add menu option to save draft to frmCompose File menu.
+ • Only check for site compatibility in Properties if it changes, now.
+ • Add fallback for reading in long emails to read in line-by-line if the ReadToEnd fails
+ • 
+Fix email send failure when only an email address is specified in the "To" field.
+ • Improved testing for replacing double quote with fancy version.
+ • CheckSiteCompatibility will no longer end program. 
+
+
+
+1.026
+ • Add ability to turn SSL on/off for connecting to email.
+ • Fix problem in OpenADatabase where control dataset was not being cleared before being filled.
+ • Fix problem with emoji translation with the snowflake as a special case.
+ • Add ability in debug options to leave email on the server
+ • Fix problem with view source failing with the list box now holding the complete email file path.
+ 
+
+  1.025
+ • Fix error generated when saving an email as a draft, where the text contains an apostrophe.
+ • Add test for levanshtein distance when selecting possible words in spell check. 
+
+1.024
+ • Add edit-and-continue to spell check.
+ • Missing email on double-click now gives option to delete, instead of deleting automatically.
+ • Allow selection of multiple emojis.  Emoji window closes when it loses focus.
+ • Fix problem with DistributeEmail not adding received email to list box with box name in path.
+
+1.023
+ • Fix problem with clicking "add" button in spell check dialog not closing spell dialog, while pressing "a" did.
+ • Fix problem with spell check catching words ending in " 'll " as misspelled. 
+ • Fix problem with added Cr/Lf in GetTextPlain when line already ends with either Cr or Lf.
+ • Fix indexing error in GetTextHTML when text fails test for IndexOf("<HTML").
+ • Add error trapping to both GetTextPlain and GetTextHTML.
+
+1.022
+ • Added email search feature. 
+ • Fixed problem that caused an email to be sent without completing spell checking if one selected "edit" in the spell check dialog box.
+
+1.021
+ • Added spell check feature to email editor.
+ • Fixed bug in inbox display that allows subject to extend past column. 
+
+1.020
+ •  Added ability to use emojis in subject line, and to display them in the inbox and other boxes.
+
+1.019
+ • Added sync feature to sync emojis table between two databases. 
+
+1.018
+ • Added search feature to emoji window.
+ • Fixed problem with deleted items in outbox not being removed from list. 
+
+1.017
+ • Fixed problem with incrementing emoji usage count changing literal emoji values.
+
+1.016
+ • Added new emoji window to email editor, with Ctrl-period to invoke. 
+
+1.015
+ • Made fixes to emoji and HTML translation routines. 
+
+1.014
+ • Added undo/redo ability to email compose window.
+ • Moved emoji translation into a database table.
+
+1.013
+ • Fixed "index is greater than length" error when displaying emails with no subject. 
+
+1.012
+ • Added support for more emojis
+
+1.011
+ • Fixed insertion of images, so they are in the correct orientation (landscape or portait).  Same problem fixed in email view when showing image thumbnails as attachments. 
+
+1.01
+ •  Fixed display of image thumbnails as attachments, when received email identifies them as content-type octet/stream instead of image.
+
+1.009
+ • Added "Release Notes" support.
