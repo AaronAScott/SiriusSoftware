@@ -1,0 +1,115 @@
+﻿4.003
+ • Updated MimeKit, BouncyCastle and System.Printing.Asn1.
+ • Fixed bug where removing a recipe called TOC.Refresh
+ • Fixed bug where a recipe, of which the page sizes are store in hundredths, prints off the page.
+ • Add present for color/grayscale setting.
+
+4.002
+ • Fixed old bug where the recipe print form was refreshing the TOC, breaking all links.
+ • Fixed bug where the updated card height and width, after closing the print form, were not refreshed in the displayed recipe.
+ • Instituted proper scaling of displayed recipe cards in print form.
+ • Added 8½x11 as a print size option.
+ • Printing a recipe card now presets the print settings automatically, so using "preferences" is unnecessary.
+ • Fixed bug with the Category field in recipe entry not using autoselect in an edit.
+ • Fixed bug with side 2 of a recipe card not being redisplayed if the font, font size or paper size is changed.
+ • Fixed bug with a pasted recipe not setting "DatabaseChanged" flag.
+ • Added a blank line on a printed card if notes are included, to separate them from the procedure.
+
+4.001
+ • Fix parsing bugs in ListBox object for TableName and SelectStatement.
+ • Add txtNotes to event handler for the KeyPress event.
+ • Fix bug that was causing notes for a recipe to not get printed when selected.
+
+4.000
+ • Replaced common modules lib, global, listbox, listboxsearch,programupdater, messagebox
+ • View Recipe window can now display multiple recipes.
+ • View Recipe window now blocks timeouts and screen saver.
+ • Updated handling of recipes in OpenBook, to avoid mixed access via the TOC or the recipe recordset itself.
+ • Updates of TextTrim and WordWrap.  Fixed display of TOC so author's names don't overwrite the page number.
+ • Added notes field to recipe record.
+ • Improved "exchange format" based on XML, with improved parsing.
+ • Images for recipes are resized automatically.
+ • Removed multiple category feature, which wasn't functioning correctly.
+ • Improved parsing of ingredients using RegEx
+ • General code updates
+ • Added "export" options to recipe menu, including versions specifically for mobile phone viewing.
+
+3.639
+ • Replaced rotated print function with new version
+ • Fix bugs in accessing records when clicking on a tab.
+ • Added new FindRecipe function to the TableOfContents class, renamed Find to FindCategory
+ • Replaced Lib.vb  with new version, made changes where required to program for using the new WordWrap function.
+ • Change Portions form was showing wrong recipe.
+ • Fix bug with being unable to edit a recipe category.
+ • Added function WordWrapEx to frmOpenBook: a special version that can handle hyperlinks.
+ • Added test to pnlProcedure to exit paint routine when it had drawn last line, and shortened the panel height to match the textbox height.  This keeps the procedure from running off at the bottom of the box and speeds up the redraw time.
+
+3.638
+ • Updates to frmOpenBook to use new version of PromptedTextBox.dll
+
+3.637
+ • Add retry code to OpenBook where the program tries to open the recipes, images and links tables.
+
+3.636
+ • Fix bug in recipe entry that replaced entire contents of entry field when pasting.
+ • Fix bug in removing a recipe that removed the wrong recipe (was getting ID from mRec instead of TOC).
+ • Change KeyPress routine for recipe entry windows so it'll catch and replace words regardless of where they're typed, instead of only at the ending of the text.
+
+3.635
+ • Turn scroll bars back on (they'd gotten turned off somehow) in recipe entry fields for ingredients and procedure.
+ • Enable longer recipe procedures without the procedure getting "cut off" in the display.
+
+3.634
+ • Allow new PromptedTextBox entry fields for recipe ingredients and procedure to received clipboard text with the Shift-Insert keystroke.
+ • Fix problem with newly-added recipes not appearing until database is closed and reopened, by destroying the TOC after rebuilding the recipe recordset, so that it will be rebuilt with the new recipe.
+ • Fix problem with pasted images for just-added recipes attaching to wrong recipe.
+ • Fix problem with just-added recipes not being found when selected from the "Recent" menu.
+
+3.633
+ • Change to use new SE_MailSender DLL instead of the Sirius Email program, which no longer contains the COM routine.
+
+3.632
+ • Add new ability to program updater to copy missing files (i.e.database template).
+ • Change default SQL Server instance name to MSSQLLocalDB.
+
+3.631
+ • Add new program update routine.
+ • Changed event names to comply with latest PromptedTextBox version.
+
+3.630
+ • Fix bug that hid second or subsequent recipes with the same category and name from appearing in the table of contents.
+ • Fix bug that caused error in the TextChanged event for the category text box when it was cleared after saving a recipe.
+ • Fix bug in library search form that didn't allow sorting the list by cookbook title.
+
+3.629
+ • Fix bug that wasn't clearing the entry fields for a new recipe, if two new recipes were entered in succession.
+
+3.628
+ • Fix bug in View Recipe that caused the last 2 lines of column 1 of the ingredients list to be duplicated at the top of the second column.
+
+3.627
+ • Change local mail option from .Net mail to MailKit API.
+ • Update to allow connecting with latest version of Sirius Email.
+ • Add View feature to recipes.
+ • Add PromptedListBox control to new recipe window.
+
+3.626
+ • Fix bug in emailing recipe, where sender field is not filled in, causing Sirius Email to fail to send.
+ • 
+Fix bug where adding new recipe doesn't display the new recipe after saving.
+ • Fix problem with category not getting capitalized.
+
+
+3.625
+ • Fix bug caused by using the new TableOfContents datatable in OpenBook, instead of mRec, that caused images to be added to the wrong recipe.
+
+3.624
+ • Add ability to assign recipes to multiple categories
+ • Fix problem with displaying links in recipes. 
+
+3.623
+ • Added "Release Notes" feature.
+
+3.622
+ • Added image resizing to the email function, when attaching images to HTML email.
+ • Added support for Sirius Email.
