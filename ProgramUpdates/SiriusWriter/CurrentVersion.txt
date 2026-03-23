@@ -1,0 +1,46 @@
+﻿1.007
+ • Remove right margin setting from RTF box, as pnlPage shows the page margins.
+
+1.006
+ • Make pnlPage very slightly gray, to show the margins of the page.
+
+1.005
+ • Add search feature, and sort options to Maintain Dictionary form.
+
+1.004
+ • Add error trapping to OpenFile sub, around the filesystem open statement.
+ • Add FileExists test around a file selected from the MRU list, and offer to remove it from the list if it no longer exists.
+
+1.003
+ • Fix bug that caused error during startup if no command line argument was passed.
+
+1.002
+ • Fix problem caused by previous update.
+
+1.001
+ • Add feature to utilities to allow user to maintain the spelling dictionary.
+ • Fix bug that caused a file name, passed on the command line, to not be opened at startup.
+
+1.000
+ • Added bulleted list feature
+ • Full release, first version
+
+0.006
+ • Right margin marker wasn't positioned correctly when landscape mode selected
+ • Prompt to save changes wasn't given when selecting "New Document", when the current document had unsaved changes.
+
+0.005
+ • Changing paper size/type in pager setup wasn't setting the document paper size.
+
+0.004
+ • Changing to landscape mode wasn't changing page display.
+
+0.003
+ • Added margin ruler and scrolling, page background.
+
+0.002
+ • Add SE_Tools.dll to dependencies
+
+0.001
+ • First beta version
+
