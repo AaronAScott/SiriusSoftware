@@ -1,0 +1,9 @@
+﻿1.002
+ • Improvements to MDViewer to support wrapped-around lines.
+
+1.001
+ • Fixed by in the music control's PlaystateChanged event handler that wasn't setting the IsPlaying flag correctly.  Changed font size in MarkdownViewer's editor textbox.  Removed Player property from wrapper and added its properties and methods to the music control, so that the program cannot access the wrapper directly.
+
+1.000
+ • Initial release.
+
