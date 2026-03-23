@@ -1,0 +1,30 @@
+﻿2.134
+ • Fixed bug in SRep function that could cause a bad index error if supplied string was empty.
+
+2.133
+ • Moved to VS 2026 and Git.  Updated MsgBox and ProgramUpdater modules to latest version.
+
+2.132
+ Fixed bug in table designer that caused scrollbar value to be sometimes too small to show all fields in a table.
+
+2.131
+ • Installed common ProgramUpdater module.
+
+2.130
+ • Fix bug in routine that generates the DataAdapterQueries module, to add more robust opening and closing of the data adapters.
+
+2.129
+ • Fix bug in TableDesigner that didn't expand the panel containing index field controls when a new row was added, causing the "add new field" link to be hidden.
+
+2.128
+ • Add ability to change the cell font in the Data Viewer
+
+2.127
+ • Fixed problems with unicode support on a field. 
+ • Fixed problem with pasting data into table.
+ 
+2.126
+ • Added "Release Notes" support.
+
+2.125
+ • Added "Unicode" option to text fields, controlling the COLLATION data.
