@@ -1,0 +1,5 @@
+﻿2.000
+ • Updated to handle multiple updates of both exe and dll files.
+
+1.000
+• Created.
