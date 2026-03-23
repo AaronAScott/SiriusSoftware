@@ -1,0 +1,18 @@
+﻿2.000
+ • New algorithm displays prompt, but does not use the text property; rather, it draws it over the text control.
+
+1.003
+ • F7 key was getting swallowed by a previous test in the chain.
+
+1.002
+ • Was able to remove underscored event names by changing names of handlers and using RaiseEvent on the base class.
+ • Now sets default name on creation, incrementing each time.
+
+1.001
+• Removed Clear method.
+• No longer shadows KeyPress, but shadows Enter and MouseDown.
+• Improved undo.
+• Clicking into a field now places the insert point at the beginning, if the prompt is displayed.
+
+1.000
+• Created.

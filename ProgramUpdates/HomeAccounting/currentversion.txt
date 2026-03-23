@@ -1,0 +1,189 @@
+﻿2.063
+ • Adjusted forecolor and text properties for all entry fields using the new 2.0 version of PromptedTextBox.
+
+2.062
+ • Fixed bug in auto-distribute payment where selection was CheckID IS NULL to add OR CheckID=''
+
+2.061
+ • Replaced MsgBox.vb with new totally drop-in version.
+
+2.060
+ • Updated common modules: lib, global, listbox, listboxsearch, programupdater, messagebox
+ • Code updates throughout
+ • Changed security over to use AES encryption.
+ • Fixed bug in budget report, that caused report to mess up if reprinted from the preview window.
+
+2.059
+ • Contains updated versions of standard modules ListBox, ListBoxSearch, MessageBox and ProgramUpdater.
+
+2.058
+ • Changed textbox "enter_" events, required for version 1.001 of PromptedTextBox, to "enter" events for version 1.002.
+ • Added options to handling a database checked out to current computer.
+
+2.057
+ • Fix bug in MaintainCOA save routine that referenced a list box item without validating index.
+
+2.056
+ • Remove CopyDatabaseToLocal and restructure GetLocalCopy
+
+2.055
+ • Change Resume to Resume Next in CopyDatabaseToLocal, to prevent infinite loop if an error is encountered during the copy process.
+
+2.054
+ • Fix bug in CopyDatabaseToLocal function.
+
+2.053
+ • Fix bug that didn't let selecting "cancel" from the local copy release dialog to exit the program.
+ • Add feature to GetLocalCopy that makes 3 attempts to fetch a local copy before reporting failure.
+
+2.052
+ • Add option to turn off Windows 11 print options dialog off in favor of legacy dialog, in Properties window.
+
+2.051
+ • Fix bug that caused the program to return to the local copy action dialog after releasing the local copy, preventing program shutdown.
+
+2.050
+ • Fix bug in FillFields in AddCheck, that set the transaction type after the check number, causing the check number to be erased.
+
+2.049
+ • If user selects Cancel at the local copy release window, reopen the database and continue.
+
+2.048
+ • Fix bug that allowed remote database to fail to be copied over, the the old file deleted, when checking in.
+
+2.047
+ • Project Expense Report print options no longer supplies a default from-through date range.
+ • Project Expense Report will now print all sub-accounts if a main account number is specified.
+ • Entering credit memos will now default to "pay".
+ • Fixed bugs in monthly budget report that caused refunds and some credits to be missed.
+ • Fixed bugs in invoice payment/check printing process that wasn't setting the credit account to the bank.
+ • Fix bug that caused the transaction type to change in invoice entry when fields were cleared.
+ • Fix bug in AddCheck that set the transaction description to its tag (leftover from before using the new PromptedTextBox)
+ • Fix to bug in CloseDatabase that could cause entry forms to be left open even when the database was closed.
+
+2.046
+ • Refund transactions will now include a credit memo to the invoice table.
+ • Fix Project Expense Report to include credit memos.
+
+2.045 
+ • Fix problem with fetching a local copy reporting that a local copy already exists, when it does not.
+ • Fix bug with partial payments of invoices getting a check date of 0, due to the insert statement using CDate instead of lDate.
+
+2.044
+ • Fix problem with double-clicking an invoice, or clicking the edit button in the Record Charges window, causing an error when the Add Invoice window is open.
+
+2.043
+ • Fix bug in PrintPageHeadings.  Column headers were not getting blank-trimmed after parsing, causing improper positioning in places.
+
+2.042
+ • Fix bug that could cause the update list box to be too long, and run over the panel with the button in ProgramUpdater.vb.
+
+2.041
+ • Add ability to new program update routine to support copying of missing non-executable files (i.e. database templates).
+ • Change default SQL server instance name to 'MSSQLLocalDB"
+
+2.040
+ • New update routine will update the program as well as all dependencies.
+ • Add calendar control to new vendor form to select automatic invoice date.
+
+2.039
+ • Changes to support version 1.001 of PromptedTexBox.dll.
+
+2.038
+ • Changes to Archive Checks/Invoices routine to return the error message instead of HRESULT.
+ • Fill in invoice Due Date automatically when an Invoice Date is selected from the pop-up calendar.
+ • Fix bug that trigger "no row at index -1" error when creating a vendor on the fly.
+
+2.037
+ • Fix bug in Find function that could cause ID not found errors (or other errors).
+
+2.036
+ • Fix problem with entry fields not being cleared in AddBank and AddVendor routines.
+
+2.035
+ • Unhandled exceptions will no longer trigger the "do want want to end home accounting" question.
+ • Added separate error traps in maintain COA for saving/updating account and changeID queries.
+
+2.034
+ • Fix bug that caused "draw from reserve funds" checks to sort wrong.
+ • Entering an actual check, manually, will now update the bank "last check number" field with the check number.
+
+2.033
+ • Fixed bug that caused automatic payments to fail with a NULL value in new field [SortOrder].
+ • Fixed bug that wasn't filling in the default credit account number in AddCheck in the new PromptedTextBox
+ • Added divider line between automatic payments in the Payment Results window.
+
+2.032
+ • Fix bugs in outstanding checks report, account reconciliation relating to new refund type.
+ • Updated GetR function in Lib.vb.
+ • Implemented new PromptedListBox control in most data entry windows.
+ • Fixed bug in Delete Check that could cause a second or subsequent check for a prepaid invoice being deleted in the same session to "unpay" the attached invoice instead of deleting it.
+ • Fix bug that could cause a network instance of the database to be deleted when a local copy failed to release.
+
+2.031
+ • Added an "Account Type" field to the COA (Chart of Accounts).  Accounts are now typed as asset, expense or income accounts, and the "Add Check" window will only look up appropriate accounts when the lookup icon is selected in a field.
+ • Updated ParseString, Min and Max functions in Lib.vb
+
+2.030
+ • Added "Refund" transaction type to program.
+
+2.029
+ • Add ability to cancel a "draw from reserve account" transaction when alerted that it contains inadequate funds.
+
+2.028
+ • Add ability to specify the payment date when paying invoices, instead of using the current date.
+ • Refresh the invoice list after deleting a check.
+ • Fix bug in frmMain that looked for a foreward slash instead of backslash with \testdb flag
+
+2.027
+ • Add 10 second delay before performing "undo checkout" to allow time for SQL server to shut down, to prevent errors.
+
+2.026
+ • Fix bug in renaming "$" file in database when using local copy option, that prevented the "discard changes and undo checkout" function from succeeding.
+ • Fix bug in GetLocalCopy that could leave the "Getting local copy" message displayed if function exited early.
+
+2.025
+ • Fix bug that causes "no connection" error on QueryNonExecute in check printing, when there are no invoices marked to may for selected vendors.
+
+2.024
+ • Fix problem with month after next budget not getting saved because radio button not disabled.
+
+2.023
+ • Fix bug in local copy release that failed to delete local copy after it's been checked in.
+
+2.022
+ • Allow budget editor to maintain two months in advance instead of only one.
+ • 
+Fix problems with local database function.
+
+2.021
+ • Supply last-used credit account as the default in a deposit transaction.
+
+2.020
+ •  Deposit bank transactions are now correctly filling in the bank's GL number in the debit account box.
+ •  The results of automated payments box has been widened, so that the scroll bar, when present, does not overlay a portion of the payment amount field. 
+
+2.019
+ • Fixed bug in Monthly Budget Report to correct sorting of checks by account/date. 
+
+2.018
+ • Update database to make the bank GLNum field unique. 
+
+2.017
+ • Fix to Distributed Debits to make sure all fields are cleared after saving transacton.
+ • Fix to default credit account, when the credit account is a reserve account and transaction type is "draw from reserve account".
+ • "View Release Notes" button added to "About" box. 
+ • Fix to Distributed Debits to close automatically if any transaction type other than "Check" is selected.
+
+2.016
+ • Added "Release Notes" support.
+
+2.015
+ • Fixed custom color selection in "Change Color Theme" to show the currently-selected color.
+ • New login window.
+
+2.014
+ • Fixed date field in "Add Check" form to retain last-entered date.
+
+2.013
+ • Fixed tab control width in "View Vendor" to fix cut-off "Alt Payee" column.

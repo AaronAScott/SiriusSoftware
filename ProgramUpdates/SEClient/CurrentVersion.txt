@@ -1,0 +1,9 @@
+﻿1.002
+ • Make single-instance executable
+
+1.001
+ • Added NotifyIcon feature
+ • Added Message function
+
+1.000
+ • Release

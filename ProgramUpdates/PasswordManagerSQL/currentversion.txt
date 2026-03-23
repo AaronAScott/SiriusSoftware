@@ -1,0 +1,6 @@
+﻿1.106
+ • Added support for changing color theme.
+ • Added "Release Notes" support
+
+1.105
+ • Added ability to open a different database, or to create a new database.
