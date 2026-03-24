@@ -1,4 +1,7 @@
-﻿1.002
+﻿1.003
+ • New program update utility that works off the SiriusSoftware update site.
+
+1.002
  • Improvements to MDViewer to support wrapped-around lines.
 
 1.001
