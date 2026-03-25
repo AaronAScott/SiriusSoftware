@@ -1,4 +1,7 @@
-﻿2.063
+﻿2.064
+ • Added internet update routine.
+
+2.063
  • Adjusted forecolor and text properties for all entry fields using the new 2.0 version of PromptedTextBox.
 
 2.062
