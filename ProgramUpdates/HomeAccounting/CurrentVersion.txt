@@ -1,4 +1,7 @@
-﻿2.064
+﻿2.065
+ • New About box, added MD viewer and "View License", "View Readme" options to the Help menu.
+
+2.064
  • Added internet update routine.
 
 2.063
