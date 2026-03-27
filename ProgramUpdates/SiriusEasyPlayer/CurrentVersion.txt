@@ -1,4 +1,7 @@
-﻿1.003
+﻿1.004
+ • Added power-down and power-up event handlers to shut down and restart the audio engine.
+
+1.003
  • New program update utility that works off the SiriusSoftware update site.
 
 1.002
