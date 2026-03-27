@@ -1,4 +1,7 @@
-﻿1.004
+﻿1.005
+ • Fixed problem with SiriusAudio object being created in the declarations of the music player control.  Disabled relay timer in wrapper's dispose method.
+
+1.004
  • Added power-down and power-up event handlers to shut down and restart the audio engine.
 
 1.003
