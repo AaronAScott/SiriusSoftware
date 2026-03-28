@@ -1,4 +1,7 @@
-﻿1.005
+﻿1.006
+ • Changed dependencies to update SiriusAudio.dll from its own update folder.  Add context menu to listbox in music player form, to make a change-selection easier when double-click is troublesome.
+
+1.005
  • Fixed problem with SiriusAudio object being created in the declarations of the music player control.  Disabled relay timer in wrapper's dispose method.
 
 1.004
