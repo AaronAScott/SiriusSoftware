@@ -1,1 +1,5 @@
+﻿1.001
+ • Added safe shutdown and restart routines for power-off situations.
 
+1.000
+ • Initial release
