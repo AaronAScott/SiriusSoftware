@@ -1,4 +1,7 @@
-﻿2.134
+﻿2.135
+ • New About window, new internet updating routine, new MD viewer for license and ReadMe files.
+
+2.134
  • Fixed bug in SRep function that could cause a bad index error if supplied string was empty.
 
 2.133
