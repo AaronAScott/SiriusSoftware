@@ -1,4 +1,7 @@
-﻿4.003
+﻿4.004
+ • Added new about box, ReadMe and license viewer, markdown viewer control, new internet update routine.  Fixed bug in recipe entry that had the textboxes still using dark gray and the text property matching the prompt, left over from version 1 of the prompted text box.
+
+4.003
  • Updated MimeKit, BouncyCastle and System.Printing.Asn1.
  • Fixed bug where removing a recipe called TOC.Refresh
  • Fixed bug where a recipe, of which the page sizes are store in hundredths, prints off the page.
