@@ -1,4 +1,10 @@
-﻿4.000
+﻿4.002
+ • Recompiled to 64-bit.  Added test in Twain scan routine to test for a 1-bitcount header, which is undecipherable to this program.
+
+4.001
+ • New internet update routine, new about box, new markdown viewer and markdown control, added license and readme files.
+
+4.000
  • Added TWAIN support for scanners
 
 3.252
