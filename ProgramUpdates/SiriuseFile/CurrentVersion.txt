@@ -1,4 +1,7 @@
-﻿4.002
+﻿4.003
+ • Add override to the font property for the markdown viewer.  Set textbox and markdown sizes manually in formload event of the MD viewer.
+
+4.002
  • Recompiled to 64-bit.  Added test in Twain scan routine to test for a 1-bitcount header, which is undecipherable to this program.
 
 4.001
