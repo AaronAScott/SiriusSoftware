@@ -1,4 +1,11 @@
-﻿2.065
+﻿2.066
+ • Fixed bug in Invoice List Search Invoices feature than could result in a Null exception.  Enabled the "View Paid Invoices" to view the invoice archive, and to allow sorting by columns.
+ • Fix bug introduced with true encryption of user data, that caused the setting of RW, RO and "None" rights, in the advanced security settings form, to not cycle through the 3 states.
+ • Added Help menu options to view Easy Accounting Concepts and Getting Started guides.
+ • Add "retired" flag to vendors who've had no paid invoices for 2 or more years, and a feature to unretire them, whenever they are used again.  (They remain available only to the autosuggest feature in vendor ID text boxes).
+ • Fixed bug in advanced security which prevented cycling through RW, RO and None rights.
+
+2.065
  • New About box, added MD viewer and "View License", "View Readme" options to the Help menu.
 
 2.064
