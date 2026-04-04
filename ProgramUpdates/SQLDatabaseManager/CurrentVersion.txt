@@ -1,4 +1,7 @@
-﻿2.135
+﻿2.136
+ • Fixed bug in SREP that could cause a runtime error if handed an empty string.
+
+2.135
  • New About window, new internet updating routine, new MD viewer for license and ReadMe files.
 
 2.134
