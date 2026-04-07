@@ -1,4 +1,7 @@
-﻿2.066
+﻿2.067
+ • Recreated the LookupBox feature as a drop-in module.  Updated MsgBox and Programmer updater to fix memory leak caused by not disposing of forms created in code.
+
+2.066
  • Fixed bug in Invoice List Search Invoices feature than could result in a Null exception.  Enabled the "View Paid Invoices" to view the invoice archive, and to allow sorting by columns.
  • Fix bug introduced with true encryption of user data, that caused the setting of RW, RO and "None" rights, in the advanced security settings form, to not cycle through the 3 states.
  • Added Help menu options to view Easy Accounting Concepts and Getting Started guides.
