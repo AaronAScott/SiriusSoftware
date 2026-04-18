@@ -1,4 +1,9 @@
-﻿2.067
+﻿2.068
+ • Removed leftover code from early simulation of prompted text box control in AddCheck form.
+ • New "Retired" flag in vendor record wasn't getting set in AddVendor form.
+ • Fixed error in "AddInvoice" form, created in earlier changes, of looking at the local vendor table to verify a vendor ID, instead of in the GlobalVendorsTable.
+
+2.067
  • Recreated the LookupBox feature as a drop-in module.  Updated MsgBox and Programmer updater to fix memory leak caused by not disposing of forms created in code.
 
 2.066
