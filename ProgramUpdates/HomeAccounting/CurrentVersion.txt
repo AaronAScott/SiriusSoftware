@@ -1,4 +1,8 @@
-﻿2.068
+﻿2.069
+ • Fix ancient bug in restore procedure.
+ • Change ServerName from a global variable to a public property.
+
+2.068
  • Removed leftover code from early simulation of prompted text box control in AddCheck form.
  • New "Retired" flag in vendor record wasn't getting set in AddVendor form.
  • Fixed error in "AddInvoice" form, created in earlier changes, of looking at the local vendor table to verify a vendor ID, instead of in the GlobalVendorsTable.
