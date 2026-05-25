@@ -1,4 +1,8 @@
-﻿1.006
+﻿1.007
+ • Check IsPlaying flag in music player and perform a fullstop if true, when selecting a playlist.
+ • Move "seek_to_frame" call for resuming after shutdown into the LoadAndPlaySong routine, to ensure the song is fully initialized before seeking.
+
+1.006
  • Changed dependencies to update SiriusAudio.dll from its own update folder.  Add context menu to listbox in music player form, to make a change-selection easier when double-click is troublesome.
 
 1.005
