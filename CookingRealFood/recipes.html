@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recipe Collection</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    line-height: 1.5;
+}
+
+h1 {
+    margin-bottom: 0.25em;
+}
+
+h2 {
+    margin-top: 1.5em;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 4px;
+}
+
+.recipe-blurb {
+    font-style: italic;
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 1em;
+}
+
+.recipe-meta {
+    margin-bottom: 1em;
+}
+
+.section-title {
+    font-weight: bold;
+    margin-top: 1.5em;
+}
+
+.recipe-text {
+    white-space: pre-line;
+}
+
+.category-list {
+    margin-bottom: 1.5em;
+}
+
+.recipe-link {
+    margin-left: 1em;
+}
+
+.author {
+    color: #666;
+}
+</style>
+
+</head>
+<body>
+
+<div id="content">
+    Loading recipes...
+</div>
+
+<script>
+
+async function loadRecipes() {
+
+    const response = await fetch("recipes.json");
+    const data = await response.json();
+
+    const params = new URLSearchParams(window.location.search);
+    const recipeID = params.get("id");
+
+    if (recipeID) {
+        displayRecipe(data.recipes, parseInt(recipeID));
+    }
+    else {
+        displayIndex(data.recipes);
+    }
+}
+
+function displayRecipe(recipes, id) {
+
+    const recipe = recipes.find(r => r.ID === id);
+
+    if (!recipe) {
+        document.getElementById("content").innerHTML =
+            "<h1>Recipe Not Found</h1>";
+        return;
+    }
+
+    let html = "";
+
+    html += `<h1>${escapeHtml(recipe.RecipeName)}</h1>`;
+
+    if (recipe.Author) {
+        html += `<div><strong>Author:</strong> ${escapeHtml(recipe.Author)}</div>`;
+    }
+
+    if (recipe.Blurb) {
+        html += `<div class="recipe-blurb">${escapeHtml(recipe.Blurb)}</div>`;
+    }
+
+    if (recipe.Servings) {
+        html += `<div class="recipe-meta"><strong>Servings:</strong> ${escapeHtml(recipe.Servings)}</div>`;
+    }
+
+    html += `
+        <div class="section-title">Ingredients</div>
+        <div class="recipe-text">${escapeHtml(recipe.Ingredients)}</div>
+    `;
+
+    html += `
+        <div class="section-title">Procedure</div>
+        <div class="recipe-text">${escapeHtml(recipe.Procedure)}</div>
+    `;
+
+    if (recipe.Notes && recipe.Notes.trim() !== "") {
+        html += `
+            <div class="section-title">Notes</div>
+            <div class="recipe-text">${escapeHtml(recipe.Notes)}</div>
+        `;
+    }
+
+    html += `
+        <p>
+            <a href="recipes.html">Back to Recipe Index</a>
+        </p>
+    `;
+
+    document.getElementById("content").innerHTML = html;
+}
+
+function displayIndex(recipes) {
+
+    recipes.sort((a, b) => {
+
+        const catCompare =
+            (a.Category || "").localeCompare(b.Category || "");
+
+        if (catCompare !== 0) {
+            return catCompare;
+        }
+
+        return (a.RecipeName || "")
+            .localeCompare(b.RecipeName || "");
+    });
+
+    const categories = {};
+
+    recipes.forEach(recipe => {
+
+        const category = recipe.Category || "Uncategorized";
+
+        if (!categories[category]) {
+            categories[category] = [];
+        }
+
+        categories[category].push(recipe);
+    });
+
+    let html = `
+        <h1>Recipe Index</h1>
+        <p>${recipes.length} recipes</p>
+    `;
+
+    Object.keys(categories).forEach(category => {
+
+        html += `<h2>${escapeHtml(category)}</h2>`;
+        html += `<div class="category-list">`;
+
+        categories[category].forEach(recipe => {
+
+            html += `
+                <div>
+                    <a href="?id=${recipe.ID}">
+                        ${escapeHtml(recipe.RecipeName)}
+                    </a>
+                    ${
+                        recipe.Author
+                            ? `<span class="author"> - ${escapeHtml(recipe.Author)}</span>`
+                            : ""
+                    }
+                </div>
+            `;
+        });
+
+        html += `</div>`;
+    });
+
+    document.getElementById("content").innerHTML = html;
+}
+
+function escapeHtml(text) {
+
+    if (!text) return "";
+
+    return text
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+}
+
+loadRecipes();
+
+</script>
+
+</body>
+</html>
