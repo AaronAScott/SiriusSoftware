@@ -1,63 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cooking REAL Food</title>
 
     <style>
         body {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 0 20px;
-            font-family: DejaVu Sans, Arial, Helvetica, sans-serif;
-            line-height: 1.5;
-            background-color: #ffffff;
-            color: #000000;
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            background: linear-gradient(to bottom, #f4e8d0, #ffffff);
+            color: #333;
+        }
+
+        header {
+            background: #8b4513;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,.2);
         }
 
         h1 {
-            color: #08235C;
+            margin: 0;
+            font-size: 3rem;
+            letter-spacing: 2px;
         }
 
-        hr {
-            margin: 2em 0;
+        .subtitle {
+            font-style: italic;
+            margin-top: 0.5rem;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .episode-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .episode-list li {
+            margin-bottom: 1rem;
+        }
+
+        .episode-link {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            background: white;
+            padding: 1rem 1.5rem;
+            border-left: 6px solid #8b4513;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,.1);
+            transition: all 0.2s ease;
+        }
+
+        .episode-link:hover {
+            background: #fff8ee;
+            transform: translateX(5px);
+        }
+
+        .episode-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+
+        .episode-number {
+            color: #8b4513;
+            margin-right: 0.5rem;
         }
 
         footer {
-            margin-top: 3em;
-            font-size: 0.9em;
-            color: #555555;
+            text-align: center;
+            color: #666;
+            margin: 3rem 0 1rem;
+            font-size: 0.9rem;
         }
     </style>
 </head>
-
 <body>
 
+<header>
     <h1>Cooking REAL Food</h1>
+    <div class="subtitle">
+        Traditional cooking from real ingredients for real people.
+    </div>
+</header>
 
-    <p>
-        Welcome to Cooking REAL Food with Aaron Scott.
-    </p>
+<main>
 
-    <p>
-        Recipes, cooking notes, and helpful hints featured in the videos
-        will be posted here.
-    </p>
+    <h2>Episodes</h2>
 
-    <hr>
+    <ul class="episode-list">
 
-    <h2>Coming Soon</h2>
+        <li>
+            <a class="episode-link" href="recipes.html?id=17726">
+                <span class="episode-title">
+                    <span class="episode-number">Episode 1:</span>
+                    REAL Sourdough Bread
+                </span>
+            </a>
+        </li>
 
-    <ul>
-        <li>Faux Veal</li>
-        <li>French Bread</li>
-        <li>Additional recipes and kitchen techniques</li>
-    </ul>
-
-    <footer>
-        &copy; 2026 Sirius Software. All rights reserved.
-    </footer>
-
-</body>
-</html>
+        <li>
+            <a class="episode-link" href="recipes.
