@@ -125,12 +125,24 @@ function displayRecipe(recipes, id) {
         `;
     }
 
+const params = new URLSearchParams(window.location.search);
+
+if (params.has("id"))
+{
     html += `
         <p>
-            <a href="recipes.html">Back to Recipe Index</a>
+            <a href="index.html">Return to Episode Selection</a>
         </p>
     `;
-
+}
+else
+{
+    html += `
+        <p>
+            <a href="recipes.html">Return to Recipe Index</a>
+        </p>
+    `;
+}
     document.getElementById("content").innerHTML = html;
 }
 
