@@ -1,7 +1,7 @@
 ﻿{
     "version": 1,
-    "generated": "2026-10-30",
-    "recipeCount": 576,
+    "generated": "2026-11-16",
+    "recipeCount": 577,
     "recipes": [
         {
         "ID": 324,
@@ -4416,14 +4416,14 @@
         },
         {
         "ID": 17726,
-        "RecipeName": "Sourdough Baguettes",
-        "Blurb": "",
+        "RecipeName": "Aaron's Sourdough Bread",
+        "Blurb": "A fabulous, real, fermented sourdough bread",
         "Author": "Aaron Scott",
-        "Category": "Bread Machine Breads",
+        "Category": "Bread",
         "Servings": "2",
-        "Ingredients": "1 cup sourdough starter\n6 oz. water\n3 cups bread flour\n2 tsp. dried milk\n1 tsp. salt\n3 tsp. active dry yeast",
-        "Procedure": "1. Starter should be quite liquid. Add more water if necessary--dough should be fairly wet, yet able to hold a shape. Pour starter and 6 oz. water into bread pan. Add flour, dried milk and salt. Make a small well in middle of flour and add yeast to it. Process on dough cycle.\n2. When dough is finished, divide into two equal pieces. Handling the dough as little as possible, shape each piece into a baguette shape. Place on parchment-lined baking sheet, or baguette sheet, spray with water and allow to double in size. Meanwhile, preheat oven to 425º.\n3. Make a slash down the center of each baguette. Add two cups of ice cubes to the bottom of the oven and immediately place baking sheet in oven. Bake for 25 min. Remove and cool completely on wire rack.",
-        "Notes": ""
+        "Ingredients": "3½ cups bread flour (100%)\nLukewarm water (97% See Notes)\n1 tsp. salt\n½ cup sourdough starter",
+        "Procedure": "1. Normalize starter hydration by stirring extra flour into the ½ cup until it's the consistency of a very soft dough.\n2. Add starter to large pan. Add water and stir until starter is largely dissolved.\n3. Add flour and salt. Stir together until mixture becomes a very rough dough. Turn out onto floured surface and let sit for 1 hour.\n4. Perform a series of 4 bowl folds, each time going around the dough 4 times, using a scraper or bench knife to lift the edges of the dough and fold them over into the center of the dough. Let rest 15 minutes. (Repeat 3 times.)\n5. Perform a series of 5 stretch-and-folds, stretching the dough then folding it in half, rotating it 90° each time, 4 times. (Repeat 4 times.)\n6. Place dough in a greased pan, cover with plastic wrap and allow to rise in a warm place until noticeably larger (doubled in size is optimal). Refrigerate overnight.\n7. The next day, shape the dough into a ball, for a boule, and place in a round-bottom bowl lined with parchment. For a batard, shape into a single long \"sausage\" shape using a large proofing basket lined with parchment. For baguettes, divide dough into 3 equal pieces, and roll GENTLY over a floured surface. Grab each piece by one end, lift and let hang down and gently extrude into a long sausage shape. Place each piece in a baguette proofing basket lined with parchment.\n8. Let dough rise until very soft and airy, making sure the top extends above the proofing bowl or basket.\n9. Place a Dutch oven and lid in the oven and heat to 450º. For batards and baguettes (bake baguettes one at a time only), use a baking cloche.\n10. Carefully slash each loaf, taking care to not press down on dough. Place in preheated Dutch oven or cloche, cover and bake for 30 minutes. After 30 minutes, remove cover and bake another 8 minutes. Remove loaf from oven and let cool before slicing.",
+        "Notes": "The first time, weigh flour in grams. Take 97% of that value: that's the number of milliliters of water to use every time you make bread.  You need not do this again unless you change flours brands."
         },
         {
         "ID": 17727,
@@ -6337,6 +6337,17 @@
         "Servings": "",
         "Ingredients": "3½ cups bread flour (100%)\n97% water.\n1 tsp. salt\n1 tsp. dried yeast",
         "Procedure": "1) Mix all ingredients in a bowl until thoroughly mixed. Dough will be rough-textured. Turn out on a floured work surface and let sit for 1 hour to autolyze.\n2) Perform a series of bowl folds, 4 times around the dough. Let dough sit for 15 minutes. Repeat 3 more times.\n3) Perform a series of 4 stretch and folds, rotating the dough 90° after each fold. Let dough sit for 30 minutes. Repeat 4 more times.\n4) Shape dough into 1 boule, 1 batard or 3 baguettes. Place in a proofing basket lined with parchment and let rise until very puffy.\n5) Slash loaf just before baking. Bake in a cloche preheated in the oven at 450º, 30 minutes covered, 8 minutes uncovered.",
+        "Notes": ""
+        },
+        {
+        "ID": 42902,
+        "RecipeName": "Faux Veal",
+        "Blurb": "A fool-ya way of turning pork tenderloin into a veal substitute",
+        "Author": "Aaron Scott",
+        "Category": "Miscellaneous",
+        "Servings": "",
+        "Ingredients": "1 pork Tenderloin\nWarm water\nButtermilk powder\nKosher salt",
+        "Procedure": "1. Prepare buttermilk brine: for each cup of brine required, add the amount of buttermilk powder specified per cup on the buttermilk powder package (approx. 4 tbsp/cup). Add 2 tsp. kosher salt per cup of brine. Mix well. Refrigerate until cold.\n2. Slice tenderloin into thick slices of about ?\" thick.\n3. Pound each slice with a tendering hammer until about ?\" thick. Place in bowl.\n4. Cover pounded slices with chilled buttermilk brine. Refrigerate overnight.\n5. Drain slices. Lay out on a lined baking sheet and freeze. Once frozen, package and return to freezer. Use as needed for recipes.",
         "Notes": ""
         }
     ]
