@@ -78,8 +78,11 @@ async function loadRecipes() {
         displayRecipe(data.recipes, parseInt(recipeID));
     }
     else {
-        displayIndex(data.recipes);
-    }
+	displayIndex(
+    		data.recipes,
+   		data.version,
+    		data.generated
+	);    }
 }
 
 function displayRecipe(recipes, id) {
@@ -146,7 +149,7 @@ else
     document.getElementById("content").innerHTML = html;
 }
 
-function displayIndex(recipes) {
+function displayIndex(recipes, version, generated) {
 
     recipes.sort((a, b) => {
 
@@ -174,11 +177,14 @@ function displayIndex(recipes) {
         categories[category].push(recipe);
     });
 
-    let html = `
-        <h1>Recipe Index</h1>
-        <p>${recipes.length} recipes</p>
-    `;
-
+let html = `
+    <h1>Recipe Index</h1>
+    <p>${recipes.length} recipes</p>
+    <p class="author">
+        Database ${escapeHtml(generated)}
+        • Version ${escapeHtml(version)}
+    </p>
+`;
     Object.keys(categories).forEach(category => {
 
         html += `<h2>${escapeHtml(category)}</h2>`;
