@@ -130,7 +130,7 @@ function displayRecipe(recipes, id) {
 
 const params = new URLSearchParams(window.location.search);
 
-if (params.has("id"))
+if (params.get("returnTo") === "episode")
 {
     html += `
         <p>
@@ -145,8 +145,7 @@ else
             <a href="recipes.html">Return to Recipe Index</a>
         </p>
     `;
-}
-    document.getElementById("content").innerHTML = html;
+}    document.getElementById("content").innerHTML = html;
 }
 
 function displayIndex(recipes, version, generated) {
@@ -181,8 +180,8 @@ let html = `
     <h1>Recipe Index</h1>
     <p>${recipes.length} recipes</p>
     <p class="author">
-        Database ${generated}
-        • Version ${version}
+        Database $(generated)
+        • Version $(version)
     </p>
 `;
     Object.keys(categories).forEach(category => {
