@@ -1,4 +1,9 @@
-﻿4.005
+﻿4.006
+ • Replaced old FindRecipe function with new version.
+ • Added "Loading Recipes" message when cookbook is opening.
+ • Fixed bug that caused clicking on a tab to sometimes show no recipe.
+
+4.005
  • Fixed bug in frmOpenBook that caused the notes entry field to display light gray instead of black text.
 
 4.004
