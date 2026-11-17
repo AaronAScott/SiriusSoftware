@@ -78,7 +78,7 @@ async function loadRecipes() {
         displayRecipe(data.recipes, parseInt(recipeID));
     }
     else {
-        displayIndex(data.recipes);
+        displayIndex(data);
     }
 }
 
@@ -146,7 +146,9 @@ else
     document.getElementById("content").innerHTML = html;
 }
 
-function displayIndex(recipes) {
+function displayIndex(data) {
+
+    const recipes = data.recipes;
 
     recipes.sort((a, b) => {
 
@@ -177,6 +179,14 @@ function displayIndex(recipes) {
     let html = `
         <h1>Recipe Index</h1>
         <p>${recipes.length} recipes</p>
+        <p class="author">
+            Database ${escapeHtml(data.generated || "Unknown")}
+            ${
+                data.version
+                    ? ` • Version ${escapeHtml(data.version)}`
+                    : ""
+            }
+        </p>
     `;
 
     Object.keys(categories).forEach(category => {
@@ -205,7 +215,6 @@ function displayIndex(recipes) {
 
     document.getElementById("content").innerHTML = html;
 }
-
 function escapeHtml(text) {
 
     if (!text) return "";
