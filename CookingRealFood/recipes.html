@@ -193,7 +193,7 @@ let html = `
 
             html += `
                 <div>
-                    <a href="?id=${recipe.ID}">
+                    <a href="?id=${recipe.ID&returnTo=index}">
                         ${escapeHtml(recipe.RecipeName)}
                     </a>
                     ${
