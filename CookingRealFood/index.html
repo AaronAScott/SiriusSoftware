@@ -74,12 +74,20 @@
             margin-right: 0.5rem;
         }
 
-        footer {
+	.site-footer {
+            background: #8b4513;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 3rem;
+            box-shadow: 0 -2px 8px rgba(0,0,0,.2);
+}
+       footer { 
             text-align: center;
             color: #666;
             margin: 3rem 0 1rem;
             font-size: 0.9rem;
-        }
+       }
     </style>
 </head>
 <body>
@@ -116,4 +124,70 @@
         </li>
 
         <li>
-            <a class="episode-link" href="recipes.
+            <a class="episode-link" href="recipes.html?id=560&returnTo=episode">
+                <span class="episode-title">
+                    <span class="episode-number">Episode 2:</span>
+                    REAL Biscuits
+                </span>
+            </a>
+        </li>
+
+        <li>
+            <a class="episode-link" href="recipes.html?id=40800&returnTo=episode">
+                <span class="episode-title">
+                    <span class="episode-number">Episode 3:</span>
+                    REAL Dresdner Christstollen
+                </span>
+            </a>
+        </li>
+
+        <li>
+            <a class="episode-link" href="recipes.html?id=42902&returnTo=episode">
+                <span class="episode-title">
+                    <span class="episode-number">Episode 4:</span>
+                    REAL (faux) Veal
+                </span>
+            </a>
+        </li>
+
+        <li>
+            <a class="episode-link" href="recipes.html?id=42894&returnTo=episode">
+                <span class="episode-title">
+                    <span class="episode-number">Episode 5:</span>
+                    REAL Candied Citrus Peel
+                </span>
+            </a>
+        </li>
+
+        <li>
+            <a class="episode-link" href="recipes.html?id=42903&returnTo=episode">
+                <span class="episode-title">
+                    <span class="episode-number">Episode 6:</span>
+                    REAL Easy Clarified Butter
+                </span>
+            </a>
+        </li>
+
+    </ul>
+</main>
+
+<footer class="site-footer">
+    <span id="copyright"></span>
+</footer>
+
+<script>
+(function () {
+    const startYear = 2026;
+    const currentYear = new Date().getFullYear();
+
+    document.getElementById("copyright").textContent =
+        "Copyright " +
+        (currentYear > startYear
+            ? startYear + "-" + currentYear
+            : startYear) +
+        " Sirius Software All Rights Reserved";
+})();
+</script>
+
+</body>
+</html>

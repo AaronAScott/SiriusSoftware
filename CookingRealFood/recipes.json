@@ -1,7 +1,7 @@
 ﻿{
     "version": "1.0",
-    "generated": "2026-11-16",
-    "recipeCount": 577,
+    "generated": "2026-11-19",
+    "recipeCount": 578,
     "recipes": [
         {
         "ID": 324,
@@ -2525,8 +2525,8 @@
         {
         "ID": 560,
         "RecipeName": "Biscuits",
-        "Blurb": "",
-        "Author": "Joy Of Cooking",
+        "Blurb": "Make either plain or garlic-cheddar biscuits with this recipe.",
+        "Author": "Adapted from Joy Of Cooking",
         "Category": "Biscuits",
         "Servings": "18",
         "Ingredients": "3½ cups all-purpose flour\n2 tsp. salt\n2 tbsp. baking powder\n6 tbsp. unsalted butter\n5 tbsp. buttermilk powder (optional)\n1⅓ cup milk\n½ cup shredded cheddar cheese (optional)\n1 tsp. garlic powder (optional)",
@@ -6349,6 +6349,17 @@
         "Ingredients": "1 pork Tenderloin\nWarm water\nButtermilk powder\nKosher salt",
         "Procedure": "1. Prepare buttermilk brine: for each cup of brine required, add the amount of buttermilk powder specified per cup on the buttermilk powder package (approx. 4 tbsp/cup). Add 2 tsp. kosher salt per cup of brine. Mix well. Refrigerate until cold.\n2. Slice tenderloin into thick slices of about ?\" thick.\n3. Pound each slice with a tendering hammer until about ?\" thick. Place in bowl.\n4. Cover pounded slices with chilled buttermilk brine. Refrigerate overnight.\n5. Drain slices. Lay out on a lined baking sheet and freeze. Once frozen, package and return to freezer. Use as needed for recipes.",
         "Notes": ""
+        },
+        {
+        "ID": 42903,
+        "RecipeName": "Easy Clarified Butter",
+        "Blurb": "Fastest, easiest way to clarify butter for cooking and sauteeing.",
+        "Author": "Aaron Scott",
+        "Category": "Miscellaneous",
+        "Servings": "",
+        "Ingredients": "1 cube butter, salted or unsalted (see notes)",
+        "Procedure": "1. Break a cube of butter in half and plance in a 1 cup measuring cup. Use wrapper to cover top of measuring cop to prevent splatters.\n2. Microwave butter until melted.\n3. Pour melted butter into a tall thin glass, ideally with a mouth wider than the base??????: a 10oz juice glass is ideal.\n4. Let sit until butter has cooled. During this time, the milk solids will settle to the bottom of the glass.\n5. Chill glass until butter is hard.\n6. With a knife or fork, losen and remove the clarified butter and store in an airtight container. Discard the milk solids.",
+        "Notes": "Since any salt stays in the watery milk solids, any kind of butter can be used."
         }
     ]
 }
