@@ -1,7 +1,7 @@
 ﻿{
     "version": "1.0",
-    "generated": "2026-11-19",
-    "recipeCount": 578,
+    "generated": "2026-11-21",
+    "recipeCount": 579,
     "recipes": [
         {
         "ID": 324,
@@ -6360,6 +6360,17 @@
         "Ingredients": "1 cube butter, salted or unsalted (see notes)",
         "Procedure": "1. Break a cube of butter in half and plance in a 1 cup measuring cup. Use wrapper to cover top of measuring cop to prevent splatters.\n2. Microwave butter until melted.\n3. Pour melted butter into a tall thin glass, ideally with a mouth wider than the base??????: a 10oz juice glass is ideal.\n4. Let sit until butter has cooled. During this time, the milk solids will settle to the bottom of the glass.\n5. Chill glass until butter is hard.\n6. With a knife or fork, losen and remove the clarified butter and store in an airtight container. Discard the milk solids.",
         "Notes": "Since any salt stays in the watery milk solids, any kind of butter can be used."
+        },
+        {
+        "ID": 42904,
+        "RecipeName": "Buñuelos",
+        "Blurb": "This is just one of a bazillion different variations.",
+        "Author": "Microsoft Copilot",
+        "Category": "Confections",
+        "Servings": "8",
+        "Ingredients": "Buñuelos:\n2 cups all-purpose flour\n1 tsp. baking powder\n½ tsp. salt\n1 tsp. cinnamon\n2 tbsp. softened butter\n1  egg\n⅔ cup milk\n1 tsp. vanilla\n\nCoating:\n½ cup sugar\n1 tbsp. cinnamon",
+        "Procedure": "Mix, knead a few minutes, rest 30 minutes, divide into 8 balls, then roll each one absurdly thin. Fry at about 350°F until blistered and golden, perhaps 30-60 seconds per side. Immediately coat with cinnamon sugar while still hot.",
+        "Notes": ""
         }
     ]
 }
