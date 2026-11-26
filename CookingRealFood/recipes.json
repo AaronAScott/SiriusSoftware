@@ -1,7 +1,7 @@
 ﻿{
     "version": "1.0",
-    "generated": "2026-11-21",
-    "recipeCount": 579,
+    "generated": "2026-11-26",
+    "recipeCount": 581,
     "recipes": [
         {
         "ID": 324,
@@ -6370,6 +6370,28 @@
         "Servings": "8",
         "Ingredients": "Buñuelos:\n2 cups all-purpose flour\n1 tsp. baking powder\n½ tsp. salt\n1 tsp. cinnamon\n2 tbsp. softened butter\n1  egg\n⅔ cup milk\n1 tsp. vanilla\n\nCoating:\n½ cup sugar\n1 tbsp. cinnamon",
         "Procedure": "Mix, knead a few minutes, rest 30 minutes, divide into 8 balls, then roll each one absurdly thin. Fry at about 350°F until blistered and golden, perhaps 30-60 seconds per side. Immediately coat with cinnamon sugar while still hot.",
+        "Notes": ""
+        },
+        {
+        "ID": 42905,
+        "RecipeName": "Nacho Cheese",
+        "Blurb": "",
+        "Author": "",
+        "Category": "Appetizers",
+        "Servings": "",
+        "Ingredients": "1 cup grated cheddar or Mexican blend cheese\n¼ cup milk\n1 tsp. cornstarch\n1 tbsp. butter\npinch salt\nOptional: paprika, cayenne, garlic powder",
+        "Procedure": "1. Mix the cornstarch with 2-3 tbsp. of the milk to make a slurry.\n2. Mix remaining milk and butter over medium-low heat until steaming. Stir in the slurry and let it thicken slightly.\n3. Add cheese gradually, stirring constantly until smooth and glossy. Season to taste with paprika, cayenne and/or garlic powder.",
+        "Notes": ""
+        },
+        {
+        "ID": 42906,
+        "RecipeName": "Homemade Stuffing",
+        "Blurb": "",
+        "Author": "",
+        "Category": "Miscellaneous",
+        "Servings": "",
+        "Ingredients": "4 cups croutons\n2 tbsp. butter\n½ cup diced onion\n½ cup diced celery (if using)\n1 to 1¼ cups stock\nPoultry seasoning, sage, pepper to taste",
+        "Procedure": "1. Sauté onion and celery in the butter until softened.\n2. Toss with the croutons and seasonings.\n3. Add stock gradually, stirring after each addition. Stop when the croutons are thoroughly moistened but still hold their shape. Cover and set aside.",
         "Notes": ""
         }
     ]
